@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marvel Studios — Estrenos 2026 & Futuro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="marvel-badge">Marvel</div>
+    <h1>Estrenos<span class="year">2026</span></h1>
+    <p class="hero-tagline">2026 y más allá · Cine &amp; Disney+ · Universo Cinematográfico Marvel</p>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── TIMELINE ── -->
+<div class="tl-section">
+  <p class="tl-label">Calendario completo de estrenos</p>
+  <div class="tl-track">
+
+    <div class="tl-year-tag">2026</div>
+    <div class="tl-line" style="min-width:20px;max-width:20px;"></div>
+
+    <div class="tl-seg">
+      <div class="tl-node d" onclick="openModal('vfGtWRu5rz8','Wonder Man')">
+        <div class="tl-dot"></div>
+        <div class="tl-info"><div class="tl-month">Ene 27</div><div class="tl-name">Wonder Man</div></div>
+      </div>
+    </div>
+    <div class="tl-line"></div>
+    <div class="tl-seg">
+      <div class="tl-node d" onclick="openModal('lav-qr0K1r8','Daredevil: Born Again T2')">
+        <div class="tl-dot"></div>
+        <div class="tl-info"><div class="tl-month">Mar 24</div><div class="tl-name">Daredevil T2</div></div>
+      </div>
+    </div>
+    <div class="tl-line"></div>
+    <div class="tl-seg">
+      <div class="tl-node d" onclick="openModal('Tz5TdC2Pez8','The Punisher: One Last Kill')">
+        <div class="tl-dot"></div>
+        <div class="tl-info"><div class="tl-month">May 12</div><div class="tl-name">The Punisher</div></div>
+      </div>
+    </div>
+    <div class="tl-line"></div>
+    <div class="tl-seg">
+      <div class="tl-node d" onclick="openModal('SfhziyEHd1g','X-Men \'97 — Temporada 2')">
+        <div class="tl-dot"></div>
+        <div class="tl-info"><div class="tl-month">Jul 1</div><div class="tl-name">X-Men '97 T2</div></div>
+      </div>
+    </div>
+    <div class="tl-line"></div>
+    <div class="tl-seg">
+      <div class="tl-node c" onclick="openModal('owfWVJoxXR4','Spider-Man: Brand New Day')">
+        <div class="tl-dot"></div>
+        <div class="tl-info"><div class="tl-month">Jul 31</div><div class="tl-name">Spider-Man BND</div></div>
+      </div>
+    </div>
+    <div class="tl-line"></div>
+    <div class="tl-seg">
+      <div class="tl-node d">
+        <div class="tl-dot"></div>
+        <div class="tl-info"><div class="tl-month">Oct 14</div><div class="tl-name">VisionQuest</div></div>
+      </div>
+    </div>
+    <div class="tl-line"></div>
+    <div class="tl-seg">
+      <div class="tl-node c" onclick="openModal('5cSQQzBufao','Avengers: Doomsday')">
+        <div class="tl-dot"></div>
+        <div class="tl-info"><div class="tl-month">Dic 18</div><div class="tl-name">Avengers: Doomsday</div></div>
+      </div>
+    </div>
+
+    <div class="tl-line"></div>
+    <div class="tl-year-tag">2027</div>
+    <div class="tl-line" style="min-width:20px;max-width:20px;"></div>
+
+    <div class="tl-seg">
+      <div class="tl-node c">
+        <div class="tl-dot"></div>
+        <div class="tl-info"><div class="tl-month">May 7</div><div class="tl-name">Secret Wars</div></div>
+      </div>
+    </div>
+    <div class="tl-line"></div>
+    <div class="tl-seg">
+      <div class="tl-node" style="opacity:.55;">
+        <div class="tl-dot"></div>
+        <div class="tl-info"><div class="tl-month">TBD</div><div class="tl-name">Armor Wars</div></div>
+      </div>
+    </div>
+    <div class="tl-line"></div>
+    <div class="tl-seg">
+      <div class="tl-node d" style="opacity:.55;">
+        <div class="tl-dot"></div>
+        <div class="tl-info"><div class="tl-month">TBD</div><div class="tl-name">Nova</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── COUNTDOWN ── -->
+<div class="cd-section">
+  <p class="cd-label">Cuenta regresiva para</p>
+  <div class="cd-movie">Avengers: Doomsday</div>
+  <div class="cd-wrap">
+    <div class="cd-unit"><span class="cd-num" id="cd-d">—</span><span class="cd-lbl">Días</span></div>
+    <div class="cd-unit"><span class="cd-num" id="cd-h">—</span><span class="cd-lbl">Horas</span></div>
+    <div class="cd-unit"><span class="cd-num" id="cd-m">—</span><span class="cd-lbl">Minutos</span></div>
+    <div class="cd-unit"><span class="cd-num" id="cd-s">—</span><span class="cd-lbl">Segundos</span></div>
+  </div>
+</div>
+
+<!-- ── EN CINES ── -->
+<div class="sec-head">
+  <h2>En Cines</h2>
+  <div class="line"></div>
+  <span class="pill">2026 · 2 películas</span>
+</div>
+<div class="feat-grid">
+
+  <!-- Spider-Man -->
+  <div class="feat-card" onclick="openModal('owfWVJoxXR4','Spider-Man: Brand New Day')">
+    <div class="feat-thumb">
+      <img src="https://image.tmdb.org/t/p/w1280/vjMvFSmGUxEtqVdaZgvFee9XkZl.jpg"
+           onerror="this.src='https://img.youtube.com/vi/owfWVJoxXR4/maxresdefault.jpg'"
+           alt="Spider-Man: Brand New Day" />
+      <div class="feat-play"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="40"/><polygon points="32,22 62,40 32,58"/></svg></div>
+    </div>
+    <div class="feat-body">
+      <div class="feat-eyebrow">Estreno en cines</div>
+      <h3>Spider-Man:<br>Brand New Day</h3>
+      <div class="feat-date">31 · Jul · 2026</div>
+      <p class="feat-desc">Cuatro años después de No Way Home, Peter Parker vive completamente solo — nadie recuerda quién es. Ser Spider-Man nunca fue tan peligroso.</p>
+      <div class="feat-tags">
+        <span class="feat-tag">Acción</span>
+        <span class="feat-tag">Superhéroes</span>
+        <span class="feat-tag">Phase 6</span>
+        <span class="feat-tag">Tom Holland</span>
+      </div>
+      <button class="btn-play" onclick="event.stopPropagation();openModal('owfWVJoxXR4','Spider-Man: Brand New Day')">
+        <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="40"/><polygon points="32,22 62,40 32,58"/></svg>
+        Ver Tráiler
+      </button>
+    </div>
+  </div>
+
+  <!-- Avengers: Doomsday (reversed) -->
+  <div class="feat-card rev" onclick="openModal('5cSQQzBufao','Avengers: Doomsday')">
+    <div class="feat-thumb">
+      <img src="https://image.tmdb.org/t/p/w1280/4OZznMYFmQPP4orKgbLaWRyYmBb.jpg"
+           onerror="this.src='https://img.youtube.com/vi/5cSQQzBufao/maxresdefault.jpg'"
+           alt="Avengers: Doomsday" />
+      <div class="feat-play"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="40"/><polygon points="32,22 62,40 32,58"/></svg></div>
+    </div>
+    <div class="feat-body">
+      <div class="feat-eyebrow">El evento del año</div>
+      <h3>Avengers:<br>Doomsday</h3>
+      <div class="feat-date">18 · Dic · 2026</div>
+      <p class="feat-desc">Los Russo Bros. regresan. Robert Downey Jr. vuelve como Doctor Doom. El evento cinematográfico que redefine el UCM para siempre.</p>
+      <div class="feat-tags">
+        <span class="feat-tag">Acción</span>
+        <span class="feat-tag">Crossover</span>
+        <span class="feat-tag">Phase 6</span>
+        <span class="feat-tag">Doctor Doom</span>
+      </div>
+      <button class="btn-play" onclick="event.stopPropagation();openModal('5cSQQzBufao','Avengers: Doomsday')">
+        <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="40"/><polygon points="32,22 62,40 32,58"/></svg>
+        Ver Tráiler
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── DISNEY+ ── -->
+<div class="sec-head">
+  <h2>Series Disney+</h2>
+  <div class="line"></div>
+  <span class="pill">2026 · 5 series</span>
+</div>
+<div class="series-wrap">
+
+  <!-- Wonder Man -->
+  <div class="s-card" onclick="openModal('vfGtWRu5rz8','Wonder Man')">
+    <div class="s-thumb">
+      <img src="https://image.tmdb.org/t/p/w1280/ldz9THIHaV4orMsUrPT1nlQF51T.jpg"
+           onerror="this.src='https://img.youtube.com/vi/vfGtWRu5rz8/maxresdefault.jpg'"
+           alt="Wonder Man" />
+      <div class="s-fade"></div>
+      <span class="s-badge">Disney+</span>
+      <div class="s-play"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="40"/><polygon points="32,22 62,40 32,58"/></svg></div>
+    </div>
+    <div class="s-body">
+      <div class="s-date">27 de Enero, 2026</div>
+      <h3>Wonder Man</h3>
+      <p>Yahya Abdul-Mateen II debuta como Simon Williams, actor en apuros que busca su gran papel en Hollywood.</p>
+      <div class="s-tags"><span class="s-tag">Serie</span><span class="s-tag">Comedia</span><span class="s-tag">Acción</span></div>
+    </div>
+  </div>
+
+  <!-- Daredevil S2 -->
+  <div class="s-card" onclick="openModal('lav-qr0K1r8','Daredevil: Born Again — Temporada 2')">
+    <div class="s-thumb">
+      <img src="https://image.tmdb.org/t/p/w1280/v2cTiLNlviotwugnDKqY21xGmSv.jpg"
+           onerror="this.src='https://img.youtube.com/vi/lav-qr0K1r8/maxresdefault.jpg'"
+           alt="Daredevil: Born Again T2" />
+      <div class="s-fade"></div>
+      <span class="s-badge">Disney+</span>
+      <div class="s-play"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="40"/><polygon points="32,22 62,40 32,58"/></svg></div>
+    </div>
+    <div class="s-body">
+      <div class="s-date">24 de Marzo, 2026</div>
+      <h3>Daredevil: Born Again T2</h3>
+      <p>Matt Murdock regresa más oscuro. Nuevas amenazas asedian Hell's Kitchen en la segunda temporada.</p>
+      <div class="s-tags"><span class="s-tag">Serie</span><span class="s-tag">Acción</span><span class="s-tag">Thriller</span></div>
+    </div>
+  </div>
+
+  <!-- Punisher -->
+  <div class="s-card" onclick="openModal('Tz5TdC2Pez8','The Punisher: One Last Kill')">
+    <div class="s-thumb">
+      <img src="https://image.tmdb.org/t/p/w1280/qO55CD8tgVL1T4WKn6zYFFiD6lL.jpg"
+           onerror="this.src='https://img.youtube.com/vi/Tz5TdC2Pez8/maxresdefault.jpg'"
+           alt="The Punisher: One Last Kill" />
+      <div class="s-fade"></div>
+      <span class="s-badge">Disney+</span>
+      <div class="s-play"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="40"/><polygon points="32,22 62,40 32,58"/></svg></div>
+    </div>
+    <div class="s-body">
+      <div class="s-date">12 de Mayo, 2026</div>
+      <h3>The Punisher: One Last Kill</h3>
+      <p>Jon Bernthal regresa como Frank Castle en este especial de 46 minutos. Un último día. Un último trabajo.</p>
+      <div class="s-tags"><span class="s-tag">Especial</span><span class="s-tag">Acción</span><span class="s-tag">Thriller</span></div>
+    </div>
+  </div>
+
+  <!-- X-Men '97 S2 -->
+  <div class="s-card" onclick="openModal('SfhziyEHd1g','X-Men \'97 — Temporada 2')">
+    <div class="s-thumb">
+      <img src="https://image.tmdb.org/t/p/w1280/iDnTAeR2WNA62XQG0ivtteDSjd5.jpg"
+           onerror="this.src='https://img.youtube.com/vi/SfhziyEHd1g/maxresdefault.jpg'"
+           alt="X-Men '97 S2" />
+      <div class="s-fade"></div>
+      <span class="s-badge">Disney+</span>
+      <div class="s-play"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="40"/><polygon points="32,22 62,40 32,58"/></svg></div>
+    </div>
+    <div class="s-body">
+      <div class="s-date">1 de Julio, 2026</div>
+      <h3>X-Men '97 — Temporada 2</h3>
+      <p>Los X-Men dispersados a través del tiempo en 9 nuevos episodios de la aclamada serie animada.</p>
+      <div class="s-tags"><span class="s-tag">Animación</span><span class="s-tag">X-Men</span><span class="s-tag">Aventura</span></div>
+    </div>
+  </div>
+
+  <!-- VisionQuest -->
+  <div class="s-card no-trailer">
+    <div class="s-thumb">
+      <img src="https://image.tmdb.org/t/p/w1280/hgo15B8eUnbEjszVV1qdV8sGz9S.jpg"
+           alt="VisionQuest" style="filter:brightness(.55);" />
+      <div class="s-fade"></div>
+      <span class="s-badge">Disney+ · Oct 2026</span>
+    </div>
+    <div class="s-body">
+      <div class="s-date">14 de Octubre, 2026</div>
+      <h3>VisionQuest</h3>
+      <p>Paul Bettany y James Spader como Ultron cierran la trilogía iniciada en WandaVision. Terry Matalas de showrunner.</p>
+      <div class="s-tags"><span class="s-tag">Serie</span><span class="s-tag">Sci-Fi</span><span class="s-tag">Drama</span></div>
+      <span class="soon-note">Tráiler en español próximamente</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── DIVISOR FUTURO ── -->
+<div class="fut-divider"><span>Más allá de 2026</span></div>
+
+<!-- ── EN CINES 2027 ── -->
+<div class="sec-head">
+  <h2>En Cines</h2>
+  <div class="line"></div>
+  <span class="pill">2027 · 2 películas</span>
+</div>
+<div class="feat-grid">
+
+  <!-- Avengers: Secret Wars -->
+  <div class="feat-card no-trailer">
+    <div class="feat-thumb" style="background: linear-gradient(135deg, #0d0221 0%, #1a0544 45%, #2d0a70 100%); min-height: 320px;">
+      <div class="thumb-grad"><div class="thumb-grad-label">Marvel Studios<br>2027</div></div>
+    </div>
+    <div class="feat-body">
+      <div class="feat-eyebrow">El evento definitivo · Phase 6</div>
+      <h3>Avengers:<br>Secret Wars</h3>
+      <div class="feat-date">7 · May · 2027</div>
+      <p class="feat-desc">La conclusión de la Saga del Multiverso. Múltiples versiones de la Tierra colisionan en una batalla que redefine el Universo Cinematográfico Marvel para siempre.</p>
+      <div class="feat-tags">
+        <span class="feat-tag">Acción</span>
+        <span class="feat-tag">Evento</span>
+        <span class="feat-tag">Phase 6</span>
+        <span class="feat-tag">Multiverso</span>
+      </div>
+      <span class="soon-note">Tráiler próximamente</span>
+    </div>
+  </div>
+
+  <!-- Armor Wars -->
+  <div class="feat-card rev no-trailer">
+    <div class="feat-thumb" style="background: linear-gradient(135deg, #060e1a 0%, #0d2240 50%, #152e55 100%); min-height: 320px;">
+      <div class="thumb-grad"><div class="thumb-grad-label">War Machine<br>2027</div></div>
+    </div>
+    <div class="feat-body">
+      <div class="feat-eyebrow">Cines · Fecha por confirmar</div>
+      <h3>Armor Wars</h3>
+      <div class="feat-date tbd">2027 · TBD</div>
+      <p class="feat-desc">Don Cheadle como James Rhodes en la gran pantalla. La tecnología Stark cae en manos equivocadas y War Machine es la última línea de defensa.</p>
+      <div class="feat-tags">
+        <span class="feat-tag">Acción</span>
+        <span class="feat-tag">Tecnología</span>
+        <span class="feat-tag">War Machine</span>
+        <span class="feat-tag">Phase 6</span>
+      </div>
+      <span class="soon-note">Tráiler próximamente</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── PRÓXIMAS SERIES ── -->
+<div class="sec-head">
+  <h2>Próximamente</h2>
+  <div class="line"></div>
+  <span class="pill">Disney+ · Futuro</span>
+</div>
+<div class="series-wrap">
+
+  <!-- Nova -->
+  <div class="s-card no-trailer">
+    <div class="s-thumb" style="background: linear-gradient(145deg, #000814 0%, #001d3d 55%, #003566 100%);">
+      <div class="s-fade"></div>
+      <span class="s-badge tbd">Disney+ · 2027</span>
+    </div>
+    <div class="s-body">
+      <div class="s-date tbd">2027 · Fecha TBD</div>
+      <h3>Nova</h3>
+      <p>El Cuerpo Nova llega al UCM. Richard Rider, el último Nova de la galaxia, enfrenta amenazas cósmicas en esta nueva serie espacial.</p>
+      <div class="s-tags"><span class="s-tag">Serie</span><span class="s-tag">Cósmica</span><span class="s-tag">Acción</span></div>
+    </div>
+  </div>
+
+  <!-- Shang-Chi 2 -->
+  <div class="s-card no-trailer">
+    <div class="s-thumb" style="background: linear-gradient(145deg, #0a0f0a 0%, #0f2211 50%, #1a3318 100%);">
+      <div class="s-fade"></div>
+      <span class="s-badge tbd">En desarrollo</span>
+    </div>
+    <div class="s-body">
+      <div class="s-date tbd">Fecha por confirmar</div>
+      <h3>Shang-Chi 2</h3>
+      <p>Simu Liu regresa como el Maestro del Kung-Fu para explorar más a fondo el mundo de Ta Lo y los secretos de las Diez Argollas.</p>
+      <div class="s-tags"><span class="s-tag">Artes marciales</span><span class="s-tag">Aventura</span><span class="s-tag">UCM</span></div>
+    </div>
+  </div>
+
+  <!-- Blade -->
+  <div class="s-card no-trailer">
+    <div class="s-thumb" style="background: linear-gradient(145deg, #0e0005 0%, #220011 50%, #350018 100%);">
+      <div class="s-fade"></div>
+      <span class="s-badge tbd">En desarrollo</span>
+    </div>
+    <div class="s-body">
+      <div class="s-date tbd">Fecha por confirmar</div>
+      <h3>Blade</h3>
+      <p>Mahershala Ali como el cazador de vampiros mitad humano, mitad vampiro. La oscuridad del UCM se expande con este largometraje.</p>
+      <div class="s-tags"><span class="s-tag">Horror</span><span class="s-tag">Acción</span><span class="s-tag">Vampiros</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2026 Marvel Studios — Todos los derechos pertenecen a sus respectivos propietarios.</p>
+  <p style="margin-top:10px;">
+    <a href="https://www.marvel.com/movies" target="_blank" rel="noopener">marvel.com</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.disneyplus.com" target="_blank" rel="noopener">disneyplus.com</a>
+  </p>
+</footer>
+
+<!-- ── MODAL ── -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal-inner">
+    <div class="modal-hd">
+      <span class="modal-title" id="modal-title"></span>
+      <button class="modal-close" onclick="closeModalBtn()">✕</button>
+    </div>
+    <div class="modal-video">
+      <iframe id="modal-iframe" src=""
+        allow="autoplay; encrypted-media; fullscreen"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/main.js" defer></script>
+
+</body>
+</html>
