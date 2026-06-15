@@ -2,7 +2,7 @@
 
 Landing page con todos los estrenos de Marvel Studios para 2026 y más allá.
 
-🔴 **[Ver en vivo → marvel2026app.netlify.app](https://marvel2026app.netlify.app/)**
+🔴 **[Ver en vivo → marvel2026app.netlify.app](https://estrenosmarvel2026.netlify.app/)**
 
 ---
 
